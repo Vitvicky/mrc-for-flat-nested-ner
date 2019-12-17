@@ -78,9 +78,13 @@ Previous SOTA:
 
 We release preprocessed and source data files for both flat and nested NER benchmarks. <br>
 
-You can download the preprocessed datasets and source data files from [Google Drive](./docs/data_release.md). 
+You can download the preprocessed datasets and source data files from [Google Drive](./docs/data_release.md). <br>
 
-For data processing, you can follow the [guidance](./docs/data_preprocess.md) to generate your own MRC-based entity recognition training files. 
+NER datasets in the CoNLL-2003 format with BMESO scheme can not be directly used in our project. 
+Code for transforming datasets with BMESO labels to query-answer pairs is at [data/data_generate/preprocess_data.py](./data/data_generate/preprocess_data.py). Queries could be found at [data/data_generate/query_map.py](./data/data_generate/query_map.py). 
+The code assumes that each dataset after preprocessing lives in a folder containing `query_ner.train`, `query_ner.dev`, `query_ner.test` files under MRC framework.
+
+
 
 ## Dependencies 
 * Packages dependencies:
