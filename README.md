@@ -93,7 +93,7 @@ pytorch-pretrained-bert == 0.6.1
 
 
 ## Usage 
-You can directly use the following commands to train and evaluate your model.
+You can directly use the following commands to train and evaluate your model with some minor changes.<br>
 As an example, the following command trains (and evaluates, automatically done after training) the `BERT-MRC` on English `OntoNotes5.0` and Chinese `Resume`:
 
 ```bash
@@ -137,7 +137,7 @@ CUDA_VISIBLE_DEVICES=2 python3 ${base_path}/run/run_query_ner.py \
 --gradient_accumulation_steps ${gradient_accumulation_steps} 
 ```
 
-```base
+```bash
 data_dir=/data/work/nl_resume_ner
 base_path=/home/work/mrc-for-flat-nested-ner
 config_path=/home/work/mrc-for-flat-nested-ner/configs/zh_bert.json
