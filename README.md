@@ -93,8 +93,8 @@ pytorch-pretrained-bert == 0.6.1
 
 
 ## Usage 
-Training commands could be found under the folder of `scripts`. <br>
-As an example, the following command trains the `BERT-MRC` on English `OntoNotes5.0` and Chinese `Resume`:
+You can directly use the following commands to train and evaluate your model.
+As an example, the following command trains (and evaluates, automatically done after training) the `BERT-MRC` on English `OntoNotes5.0` and Chinese `Resume`:
 
 ```bash
 data_dir=/data/work/english_ontonotes
