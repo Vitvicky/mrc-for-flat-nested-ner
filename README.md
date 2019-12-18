@@ -152,7 +152,7 @@ task_name=ner
 max_seq_length=512
 num_train_epochs=3
 warmup_proportion=-1
-data_sign=resume  # 56000/13000/13000
+data_sign=resume 
 checkpoint=200
 
 gradient_accumulation_steps=4
