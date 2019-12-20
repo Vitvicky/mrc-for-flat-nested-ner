@@ -19,6 +19,7 @@ import sys
 
 
 root_path = "/".join(os.path.realpath(__file__).split("/")[:-2])
+print(root_path)
 if root_path not in sys.path:
     sys.path.insert(0, root_path)
 
@@ -107,14 +108,14 @@ def load_data(config):
         data_processor = OntoEngProcessor()
     elif config.data_sign == "genia":
         data_processor = GeniaProcessor()
-    elif config.data_sign == "resume":
-        data_processor = ResumeZhProcessor()
     elif config.data_sign == "ace2004":
         data_processor = ACE2004Processor()
     elif config.data_sign == "ace2005":
         data_processor = ACE2005Processor()
     elif config.data_sign == "kbp17":
         data_processor =KBP17Processor()
+    elif config.data_sign == "resume":
+            data_processor = ResumeZhProcessor()
     else:
         raise ValueError("Please Notice that your data_sign DO NOT exits !!!!!")
 
